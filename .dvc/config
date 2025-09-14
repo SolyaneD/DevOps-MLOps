@@ -1,0 +1,6 @@
+[core]
+    remote = origin
+['remote "origin-dvc"']
+    url = https://github.com/SolyaneD/DevOps-MLOps.git
+['remote "origin"']
+    url = https://dagshub.com/SolyaneD/DevOps-MLOps.dvc

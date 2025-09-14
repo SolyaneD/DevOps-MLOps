@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  app:
+    image: YOUR_DOCKERHUB_USER/mood2playlist:latest
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./ml/outputs:/app/model  # si tu veux monter le modèle localement
+    environment:
+      - PORT=5000
