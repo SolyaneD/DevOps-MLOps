@@ -5,8 +5,8 @@ stages:
     deps:
     - path: data/mood_samples.csv
       hash: md5
-      md5: 25c977502625c817ea75e82e0cd4f394
-      size: 899
+      md5: f72399d52b56a1fcd4eca961a619f4bf
+      size: 2759
     - path: src/train.py
       hash: md5
       md5: d7992a497421ed25ae377067bfebc254
@@ -14,5 +14,5 @@ stages:
     outs:
     - path: model.pkl
       hash: md5
-      md5: d96f3abaa7e0e34f23afcba68545a6b0
-      size: 11662
+      md5: d3352018f103a50bfc7e50350616e94b
+      size: 20921
