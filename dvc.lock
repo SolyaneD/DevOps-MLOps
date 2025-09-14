@@ -1,0 +1,18 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python src/train.py
+    deps:
+    - path: data/mood_samples.csv
+      hash: md5
+      md5: 71188bfa0120605592eb2dcb7804db60
+      size: 60
+    - path: src/train.py
+      hash: md5
+      md5: d7992a497421ed25ae377067bfebc254
+      size: 1077
+    outs:
+    - path: model.pkl
+      hash: md5
+      md5: 58be17087b87c1812419e7753f43dca5
+      size: 1934
