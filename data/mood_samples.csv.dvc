@@ -1,0 +1,5 @@
+outs:
+- md5: 71188bfa0120605592eb2dcb7804db60
+  size: 60
+  hash: md5
+  path: mood_samples.csv
