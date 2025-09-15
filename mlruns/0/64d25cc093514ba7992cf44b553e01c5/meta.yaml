@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/0/64d25cc093514ba7992cf44b553e01c5/artifacts
+end_time: 1757900037837
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 64d25cc093514ba7992cf44b553e01c5
+run_name: omniscient-newt-395
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1757900037792
+status: 3
+tags: []
+user_id: solya

@@ -1,8 +1,11 @@
 flask
-scikit-learn
+scikit-learn==1.5.2
 joblib
 mlflow
 pandas
 gunicorn
 dvc
 requests
+fastapi
+uvicorn
+pytest

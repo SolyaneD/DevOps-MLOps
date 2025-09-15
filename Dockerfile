@@ -1,16 +1,16 @@
-FROM python:3.10-slim
+FROM python:3.11-slim
 
 WORKDIR /app
-COPY app/requirements.txt /app/requirements.txt
-RUN pip install --no-cache-dir -r /app/requirements.txt
 
-# copy app code
-COPY app /app
+# Copier les dépendances et installer
+COPY app/requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# default model path inside container
-ENV MODEL_PATH=/app/model/model.joblib
-ENV VECT_PATH=/app/model/tfidf.joblib
-ENV PORT=5000
+# Copier le modèle
+COPY app/model/ /app/model/
 
-EXPOSE 5000
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app", "--workers", "2"]
+# Copier le reste du code
+COPY . .
+
+# Lancer l'API
+CMD ["uvicorn", "src.predict:app", "--host", "0.0.0.0", "--port", "8000"]
