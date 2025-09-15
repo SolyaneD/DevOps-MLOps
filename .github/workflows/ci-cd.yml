@@ -35,10 +35,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME2 }}/mlops-api:latest .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/mlops-api:latest .
 
       - name: Push Docker image
-        run: docker push ${{ secrets.DOCKER_USERNAME2 }}/mlops-api:latest
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/mlops-api:latest
 
       - name: Trigger local deployment webhook
         run: |
