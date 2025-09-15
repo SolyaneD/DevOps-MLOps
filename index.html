@@ -18,6 +18,7 @@
   <script>
     async function predict() {
       const text = document.getElementById("moodInput").value;
+      // const res = await fetch("https://0df0bf4aa1bf.ngrok-free.app/predict", {
       const res = await fetch("http://127.0.0.1:8000/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
