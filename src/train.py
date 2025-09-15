@@ -25,13 +25,14 @@ pipe = Pipeline([
     ("clf", LogisticRegression())
 ])
 
-# Entraînement et tracking MLflow
 with mlflow.start_run():
     pipe.fit(X, y)
     acc = pipe.score(X, y)
     mlflow.log_metric("train_accuracy", acc)
+    mlflow.log_param("vectorizer", "TfidfVectorizer")
     # mlflow.sklearn.log_model(pipe, "model")
 
-# Sauvegarder localement
-joblib.dump(pipe, "model.pkl")
+# Sauvegarde locale pour l'API
+os.makedirs("app/model", exist_ok=True)
+joblib.dump(pipe, "app/model/model.pkl")
 print(f"Training done, accuracy={acc}")
